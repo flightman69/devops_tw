@@ -11,6 +11,6 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/speakx-flask.conf:/etc/nginx/conf.d/default.conf
-      - ./cert.pem:/etc/nginx/cert.pem
-      - ./key.pem:/etc/nginx/key.pem
+      - ./app/nginx/speakx-flask.conf:/etc/nginx/conf.d/default.conf
+      - ./app/cert.pem:/etc/nginx/cert.pem
+      - ./app/key.pem:/etc/nginx/key.pem

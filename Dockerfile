@@ -4,13 +4,9 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Install dependencies first (to leverage Docker layer caching)
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY app/ /app
+RUN pip install --no-cache-dir -r /app/requirements.txt
 
-# Copy application code
-COPY app.py .
-
-COPY . .
 # Expose port and run application
 EXPOSE 3000
 CMD ["python", "app.py"]
