@@ -32,6 +32,8 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd speakx-devops
-            git pull
-            docker-compose down
+            sudo lsof -ti :443 | xargs -r sudo kill -9
+            sudo lsof -ti :3000 | xargs -r sudo kill -9
+            docker-compose down -v --remove-orphans --timeout 1 || true
+            docker-compose pull
             docker-compose up -d
