@@ -31,6 +31,8 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            git clone https://github.com/flightman69/speakx-devops.git
+            cd speakx-devops
             docker-compose down
             docker-compose pull
             docker-compose up -d
