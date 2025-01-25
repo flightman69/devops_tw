@@ -1,20 +1,18 @@
 version: '3.8'
-
 services:
   flask-app:
-    image: 153518899895.dkr.ecr.us-east-1.amazonaws.com/speakx-ecr  
+    image: your-ecr-repo/speakx-flask-app:latest
     ports:
-      - "3000:3000"  # Flask app port
-
+      - "3000:3000"
   caddy:
     image: caddy:latest
     ports:
-      - "443:443"    # HTTPS
+      - "80:80"
+      - "443:443"
     volumes:
-      - ./caddy/Caddyfile:/etc/caddy/Caddyfile  
-      - caddy_data:/data                        
-      - caddy_config:/config                    
-
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
 volumes:
   caddy_data:
   caddy_config:
