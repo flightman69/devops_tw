@@ -1,3 +1,9 @@
 flightman.lol {
+  # Route ACME challenges to Caddy (not Flask)
+  route /.well-known/acme-challenge/* {
+    respond "Let's Encrypt validation OK"
+  }
+  
+  # Proxy all other traffic to Flask
   reverse_proxy speakx-flask-api:3000
 }
