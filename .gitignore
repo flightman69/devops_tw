@@ -1,0 +1,40 @@
+# Local Terraform directories & files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+*.terraform.lock.hcl  
+crash.log
+override.tf
+override.tf.json
+*.terraform.tfstate.lock.info
+
+# OS/Editor files
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Python specific
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+venv/
+env/
+.python-version
+
+# Local application files
+.env
+*.env.local
+*.env.*.local
+secrets/  
+
+# Terraform plan output
+*.tfplan
+
+# Exclude downloaded modules
+.terraform/modules/
+
