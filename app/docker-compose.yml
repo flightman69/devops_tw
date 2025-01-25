@@ -4,15 +4,13 @@ services:
     image: 153518899895.dkr.ecr.us-east-1.amazonaws.com/speakx-ecr
     ports:
       - "3000:3000"
-  caddy:
-    image: caddy:latest
+
+  nginx:
+    image: nginx:latest
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
-volumes:
-  caddy_data:
-  caddy_config:
+      - ./nginx/speakx-flask.conf:/etc/nginx/conf.d/default.conf
+      - ./cert.pem:/etc/nginx/cert.pem
+      - ./key.pem:/etc/nginx/key.pem
