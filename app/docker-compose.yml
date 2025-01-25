@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   flask-app:
-    image: your-ecr-repo/speakx-flask-app:latest
+    image: 153518899895.dkr.ecr.us-east-1.amazonaws.com/speakx-ecr
     ports:
       - "3000:3000"
   caddy:
