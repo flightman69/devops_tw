@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ steps.login-ecr.outputs.registry }}/speakx-ecr:latest -f app/
+          docker build -t ${{ steps.login-ecr.outputs.registry }}/speakx-ecr:latest -f app/Dockerfile .
           docker push ${{ steps.login-ecr.outputs.registry }}/speakx-ecr:latest
 
       - name: Deploy to EC2
