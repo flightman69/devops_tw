@@ -7,7 +7,6 @@ import random
 jokes = [
     "Why do programmers always mix up Christmas and Halloween? Because Oct 31 == Dec 25.",
     "I don't always test my code, but when I do, I do it in production.",
-    "Why do programmers prefer dark mode? Because light mode is for people who don’t code.",
     "I have a joke about UDP, but you probably won't get it.",
     "My code works perfectly... until I try to run it.",
     "Why did the developer go broke? Because he used up all his cache.",
