@@ -11,7 +11,7 @@
 |----------|-------------|----------|
 | `/` | Home Endpoint | Welcome message |
 | `/status` | Application Status | JSON status |
-| `/pic` | Image Retrieval | Static image |
+| `/pic` | Image Retrieval | Random Static image |
 | `/health` | Health Check | Health status |
 | `/joke` | Joke Endpoint | A random joke |
 | `/echo` | Echo Endpoint | Echoes the input JSON |
