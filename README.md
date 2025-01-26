@@ -159,4 +159,4 @@ Special thanks to Railway.app for providing an initial platform for rapid develo
 Contributions are welcome! Please open an issue or submit a pull request.
 
 ## 📜 License
-[Your License Details]
+GPL.v3
