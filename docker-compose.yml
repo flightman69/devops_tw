@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   speakx-flask-api:
-    image: 153518899895.dkr.ecr.us-east-1.amazonaws.com/speakx-ecr
+    image: 153518899895.dkr.ecr.us-east-1.amazonaws.com/speakx-ecr:latest
     ports:
       - "3000:3000"
 

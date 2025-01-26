@@ -5,9 +5,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout Code
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # Step 2: Configure AWS Credentials
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -15,15 +17,25 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      # Step 3: Login to Amazon ECR
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
+      # Step 4: Build and Push Docker Image
       - name: Build and Push Docker Image
+        env:
+          AWS_DEFAULT_REGION: us-east-1
         run: |
-          docker build -t ${{ steps.login-ecr.outputs.registry }}/speakx-ecr:latest .
-          docker push ${{ steps.login-ecr.outputs.registry }}/speakx-ecr:latest
+          IMAGE_URI=${{ steps.login-ecr.outputs.registry }}/speakx-ecr:latest
+          
+          echo "Building Docker image..."
+          docker build -t $IMAGE_URI .
 
+          echo "Pushing Docker image to ECR..."
+          docker push $IMAGE_URI
+
+      # Step 5: Deploy to EC2
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v0.1.10
         with:
@@ -31,10 +43,14 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd speakx-devops
-            #sudo lsof -ti :443 | xargs -r sudo kill -9
-            #sudo lsof -ti :3000 | xargs -r sudo kill -9
-            #docker-compose down -v --remove-orphans --timeout 1 || true
-            docker rm -f $(docker ps -q)
+            echo "Navigating to deployment directory..."
+            cd speakx-devops || exit
+
+            echo "Stopping running containers..."
+            docker rm -f $(docker ps -q) || true
+
+            echo "Pulling updated Docker images..."
             docker-compose pull
+
+            echo "Starting updated services..."
             docker-compose up -d

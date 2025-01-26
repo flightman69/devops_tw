@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "SpeakX Flask API (HTTPS Secured!)"
+    return "SpeakX Flask API (HTTPS Secured!)."
 @app.route('/status')
 def status():
     return jsonify({
