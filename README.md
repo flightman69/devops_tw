@@ -12,6 +12,10 @@
 | `/` | Home Endpoint | Welcome message |
 | `/status` | Application Status | JSON status |
 | `/pic` | Image Retrieval | Static image |
+| `/health` | Health Check | Health status |
+| `/joke` | Joke Endpoint | A random joke |
+| `/echo` | Echo Endpoint | Echoes the input JSON |
+| `/weather` | Weather Information | Weather info from wttr.in |
 
 ## 🧪 Testing the Application
 
@@ -20,6 +24,10 @@
 curl -kL https://flightman.lol/
 curl -kL https://flightman.lol/status
 curl -kL https://flightman.lol/pic
+curl -kL https://flightman.lol/health
+curl -kL https://flightman.lol/joke
+curl -kL -X POST https://flightman.lol/echo -d '{"key":"value"}'
+curl -kL https://flightman.lol/weather
 ```
 
 ## 🛠 How I Did It: A Personal Journey
@@ -148,15 +156,16 @@ The move from Railway.app to AWS was driven by:
 | Security Configuration | Basic | Extensive |
 
 ## 🚀 Lessons Learned
-- Importance of infrastructure as code
-- Benefits of cloud-native architectures
-- Value of comprehensive deployment strategies
+  - 🔧 Declarative syntax of Terraform for provinsion
+  - 🌍 AWS Ecosystem, EC2, ECR, S3 Bucket, Security Groups (SG)
+  - 💡 Containerization using Docker and Orchestration using docker-compose
 
 ## 🤝 Acknowledgments
 Special thanks to Railway.app for providing an initial platform for rapid development and deployment.
+Special thanks to [Aryan](https://github.com/theredditbandit) for reviewing this project and giving thoughtful insights.
 
 ## 🤝 Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 
 ## 📜 License
-GPL.v3
+GLWTS
