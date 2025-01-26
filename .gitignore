@@ -38,3 +38,4 @@ secrets/
 # Exclude downloaded modules
 .terraform/modules/
 
+certs/
