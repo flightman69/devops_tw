@@ -1,11 +1,11 @@
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, render_template
 import os
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "SpeakX Flask API (HTTPS Secured!)."
+    return render_template('index.html')
 @app.route('/status')
 def status():
     return jsonify({

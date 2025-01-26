@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeakX DevOps Project</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 SpeakX DevOps Project</h1>
+    </header>
+
+    <section class="container">
+        <section class="project-domains">
+            <h2>🌐 Project Domains & Endpoints</h2>
+            <div class="warning">
+                <p><strong>Disclaimer !!!</strong> The website is SECURE but self-signed, you will see a warning if you're viewing this on a browser. If you're using cURL add <code>-k</code> flag to skip SSL warning.</p>
+            </div>
+            <div class="domain">
+                <h3>Primary Domain</h3>
+                <p><strong>Domain:</strong> <a href="https://flightman.lol">flightman.lol</a></p>
+            </div>
+
+            <h3>API Endpoints</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                        <th>Response</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>/</td>
+                        <td>Home Endpoint</td>
+                        <td>Welcome message</td>
+                    </tr>
+                    <tr>
+                        <td>/status</td>
+                        <td>Application Status</td>
+                        <td>JSON status</td>
+                    </tr>
+                    <tr>
+                        <td>/pic</td>
+                        <td>Image Retrieval</td>
+                        <td>Static image</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="testing">
+            <h2>🧪 Testing the Application</h2>
+            <pre><code>
+# API Endpoint Tests
+curl -kL https://flightman.lol/
+curl -kL https://flightman.lol/status
+curl -kL https://flightman.lol/pic
+            </code></pre>
+        </section>
+
+        <section class="journey">
+            <h2>🛠 How I Did It: A Personal Journey</h2>
+            <p><strong>Initial Conceptualization:</strong> When I first approached this DevOps assignment, I initially went with railway.app as my PaaS...</p>
+            <h3>Step-by-Step Development Process</h3>
+            <ul>
+                <li><strong>Cloud Provider Selection</strong>: Chose AWS for its comprehensive services...</li>
+                <li><strong>Local Development</strong>: Developed a simple Flask application...</li>
+                <li><strong>Containerization</strong>: 
+                    <pre><code>
+# Dockerfile creation
+docker build -t speakx-flask-api .
+
+# Local testing
+docker run -p 3000:3000 speakx-flask-api
+                    </code></pre>
+                </li>
+                <li><strong>Infrastructure as Code</strong>: Used Terraform to define infrastructure...</li>
+                <li><strong>Deployment Strategy</strong>: Used Docker Compose for container orchestration...</li>
+            </ul>
+        </section>
+
+        <section class="architecture">
+            <h2>🔍 Technical Architecture</h2>
+            <p><strong>Infrastructure Components:</strong></p>
+            <ul>
+                <li><strong>Cloud</strong>: AWS</li>
+                <li><strong>Compute</strong>: EC2</li>
+                <li><strong>Containerization</strong>: Docker</li>
+                <li><strong>Orchestration</strong>: Docker Compose</li>
+                <li><strong>IaC</strong>: Terraform</li>
+            </ul>
+        </section>
+
+        <section class="project-diagram">
+            <h2>📊 Project Diagram</h2>
+            <details open>
+                <summary>Development Workflow</summary>
+                <img src="https://github.com/user-attachments/assets/a22019b6-9c7e-47ec-baa3-118b0740a1e6" alt="Development Workflow">
+            </details>
+        </section>
+
+        <section class="security">
+            <h2>🔒 Security Highlights</h2>
+            <ul>
+                <li>AWS Secrets Manager integration</li>
+                <li>Environment-based configuration</li>
+                <li>HTTPS-only communication</li>
+                <li>Restricted network access</li>
+            </ul>
+        </section>
+
+        <section class="previous-iteration">
+            <h2>🚢 Previous Iteration: Railway.app</h2>
+            <p><strong>Initial Project:</strong> Domain: <a href="https://shavok.up.railway.app">shavok.up.railway.app</a></p>
+            <p><strong>Approach:</strong> Simplified PaaS deployment</p>
+        </section>
+
+        <section class="comparative-analysis">
+            <h2>🔍 Comparative Analysis</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Railway.app</th>
+                        <th>AWS Solution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deployment Complexity</td>
+                        <td>Low</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Infrastructure Control</td>
+                        <td>Limited</td>
+                        <td>Comprehensive</td>
+                    </tr>
+                    <tr>
+                        <td>Scalability</td>
+                        <td>Basic</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Cost</td>
+                        <td>Free Tier</td>
+                        <td>Flexible, Pay-as-you-go</td>
+                    </tr>
+                    <tr>
+                        <td>Security Configuration</td>
+                        <td>Basic</td>
+                        <td>Extensive</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="lessons-learned">
+            <h2>🚀 Lessons Learned</h2>
+            <ul>
+                <li>Importance of infrastructure as code</li>
+                <li>Benefits of cloud-native architectures</li>
+                <li>Value of comprehensive deployment strategies</li>
+            </ul>
+        </section>
+
+        <section class="acknowledgments">
+            <h2>🤝 Acknowledgments</h2>
+            <p>Special thanks to Railway.app for providing an initial platform for rapid development and deployment.</p>
+        </section>
+
+        <section class="contributing">
+            <h2>🤝 Contributing</h2>
+            <p>Contributions are welcome! Please open an issue or submit a pull request.</p>
+        </section>
+
+        <section class="license">
+            <h2>📜 License</h2>
+            <p>GPL.v3</p>
+        </section>
+    </section>
+</body>
+</html>

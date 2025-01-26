@@ -1,0 +1,179 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1C1C1C; /* Dark background for contrast */
+  color: #F2F2F2; /* Light text color */
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #F25C5C; /* Soft red for headings */
+}
+
+header {
+  background-color: #B73A3A; /* Deep fiery red background */
+  color: #F2F2F2;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #8C2A2A; /* Slightly darker red for a border effect */
+}
+
+.container {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  border-bottom: 2px solid #F25C5C; /* Soft red border */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #333;
+}
+
+th {
+  background-color: #B73A3A; /* Deep red background for table headers */
+  color: #F2F2F2;
+}
+
+tr:nth-child(even) {
+  background-color: #2C2C2C; /* Light blackish grey for even rows */
+}
+
+tr:hover {
+  background-color: #F25C5C; /* Red background on hover for rows */
+}
+
+/* Links */
+a {
+  color: #F25C5C;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #B73A3A; /* Darker red when hovered */
+}
+
+/* Code and Preformatted Text */
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #333; /* Dark background for code */
+  color: #F25C5C; /* Red text color for code */
+  padding: 5px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #333; /* Dark background for preformatted text */
+  color: #F25C5C;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  border: 1px solid #444; /* Subtle border */
+}
+
+/* Warning Box */
+.warning {
+  background-color: #3E0A0A; /* Darker red warning box */
+  padding: 10px;
+  border: 1px solid #7A1D1D; /* Slightly lighter red border */
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: #F2F2F2;
+}
+
+/* Details Section */
+details {
+  margin-top: 10px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #F25C5C; /* Red for clickable summary */
+}
+
+details summary:hover {
+  color: #B73A3A; /* Darker red on hover */
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1C1C1C;
+  color: #F2F2F2;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #F25C5C; /* Red links in footer */
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Button Styles */
+button {
+  background-color: #F25C5C; /* Red button background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #B73A3A; /* Darker red on hover */
+}
+
+/* Container for Diagrams */
+.project-diagram img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  h2 {
+      font-size: 1.4rem;
+  }
+
+  table, pre, code {
+      font-size: 0.9rem;
+  }
+}
