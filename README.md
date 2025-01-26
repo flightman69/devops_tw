@@ -1,7 +1,8 @@
-# 🚀 SpeakX DevOps Project: My Journey
+# 🚀 SpeakX DevOps Project
 
 ## 🌐 Project Domains & Endpoints
-
+### Disclaimer !!!
+- **The webiste is SECURE but self-signed, you will see a warning if you're viewing this on a browser, <br> if you're using cURL add `-k` flag to skip ssl warning.**
 ### Primary Domain
 - **Domain**: [flightman.lol](https://flightman.lol)
 
@@ -12,10 +13,19 @@
 | `/status` | Application Status | JSON status |
 | `/pic` | Image Retrieval | Static image |
 
+## 🧪 Testing the Application
+
+```bash
+# API Endpoint Tests
+curl -kL https://flightman.lol/
+curl -kL https://flightman.lol/status
+curl -kL https://flightman.lol/pic
+```
+
 ## 🛠 How I Did It: A Personal Journey
 
 ### Initial Conceptualization
-When I first approached this DevOps assignment, I knew I wanted to create something robust, scalable, and secure. My goal was to demonstrate not just technical skills, but a comprehensive understanding of cloud infrastructure and deployment strategies.
+When I first approached this DevOps assignment, I initially went with railway.app as my PaaS, inorder to develop a MVP as soon as possible and learn the concepts of devops, Once I gained the knowledge of basic DevOps, then I moved to AWS, it was rough in the beginning stages of dev, since I never used AWS before, understanding the components of aws was the biggest hurdle. But in the end I have made this MVP, Only thing left to do is moving from self-signed to CA-signed.
 
 ### Step-by-Step Development Process
 
@@ -45,13 +55,8 @@ When I first approached this DevOps assignment, I knew I wanted to create someth
    - Set up Elastic IP
    - Created ECR repository
 
-5. **HTTPS Configuration**
-   ```bash
-   # SSL Certificate Generation
-   sudo certbot certonly --standalone -d flightman.lol
-   ```
 
-6. **Deployment Strategy**
+5. **Deployment Strategy**
    - Used Docker Compose for container orchestration
    - Configured Nginx as a reverse proxy
    - Implemented SSL termination
@@ -73,17 +78,17 @@ When I first approached this DevOps assignment, I knew I wanted to create someth
 - **Orchestration**: Docker Compose
 - **IaC**: Terraform
 
-## 🧪 Testing the Application
 
-```bash
-# API Endpoint Tests
-curl -k https://flightman.lol/
-curl -k https://flightman.lol/status
-curl -k https://flightman.lol/pic
-```
 
 ## 📊 Project Diagram
-[Architectural Diagram Placeholder]
+<details open>
+<summary>Development Workflow</summary>
+
+![Development Workflow](https://github.com/user-attachments/assets/a22019b6-9c7e-47ec-baa3-118b0740a1e6)
+
+
+</details>
+
 
 ## 🔒 Security Highlights
 - AWS Secrets Manager integration
