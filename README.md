@@ -2,9 +2,9 @@
 
 ## 🌐 Project Domains & Endpoints
 ### Disclaimer !!!
-- **The webiste is SECURE but self-signed, you will see a warning if you're viewing this on a browser, <br> if you're using cURL add `-k` flag to skip ssl warning.**
-### Primary Domain
-- **Domain**: [flightman.lol](https://flightman.lol)
+- **The webiste uses secure connection **_(SSL)_** but self-signed, you will see a warning if you're viewing this on a browser, click advanced options and proceed to flightman.lol, <br> if you're using cURL add `-k` flag to skip ssl warning.**
+## Primary Domain
+ - ## **Domain**: [flightman.lol](https://flightman.lol)
 
 ### API Endpoints
 | Endpoint | Description | Response |
@@ -107,7 +107,7 @@ When I first approached this DevOps assignment, I initially went with railway.ap
 ## 🚢 Previous Iteration: Railway.app
 
 ### Initial Project
-- **Domain**: [shavok.up.railway.app](https://shavok.up.railway.app)
+- **Domain**: Given in [flightman.lol](https://flightman.lol)
 - **Approach**: Simplified PaaS deployment
 - **Limitations**: Less control, basic scalability
 
