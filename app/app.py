@@ -8,7 +8,7 @@ def home():
     return "SpeakX Flask API (HTTPS Secured!)"
 @app.route('/status')
 def status():
-    jsonify({
+    return jsonify({
         "status": "API is up and Running"
     })
 if __name__ == '__main__':
