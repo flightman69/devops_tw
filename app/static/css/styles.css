@@ -1,179 +1,136 @@
-/* General Styles */
-* {
+/* Base Styles */
+body {
+  background-color: #121212;
+  color: #F5F5F5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #1C1C1C; /* Dark background for contrast */
-  color: #F2F2F2; /* Light text color */
-  line-height: 1.6;
-}
-
-h1, h2, h3 {
-  color: #F25C5C; /* Soft red for headings */
 }
 
 header {
-  background-color: #B73A3A; /* Deep fiery red background */
-  color: #F2F2F2;
-  padding: 20px;
+  background-color: #1A1A1A;
+  color: #FF5E5E;
+  padding: 20px 0;
   text-align: center;
-  border-bottom: 5px solid #8C2A2A; /* Slightly darker red for a border effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Section Styles */
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-}
-
-section {
-  margin-bottom: 40px;
 }
 
 h2 {
-  border-bottom: 2px solid #F25C5C; /* Soft red border */
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-size: 1.6rem;
+  color: #FF5E5E;
+  margin-bottom: 10px;
 }
 
-/* Tables */
+h3 {
+  color: #FF8C8C;
+  margin-bottom: 8px;
+}
+
+p, li {
+  line-height: 1.6;
+  color: #CCCCCC;
+}
+
+/* Table Styles */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
-th, td {
+table th, table td {
+  border: 1px solid #2C2C2C;
   padding: 10px;
   text-align: left;
-  border: 1px solid #333;
 }
 
-th {
-  background-color: #B73A3A; /* Deep red background for table headers */
-  color: #F2F2F2;
+table th {
+  background-color: #1A1A1A;
+  color: #FF8C8C;
 }
 
-tr:nth-child(even) {
-  background-color: #2C2C2C; /* Light blackish grey for even rows */
+table tr:nth-child(even) {
+  background-color: #2C2C2C;
 }
 
-tr:hover {
-  background-color: #F25C5C; /* Red background on hover for rows */
+table tr:hover {
+  background-color: #333333;
 }
 
-/* Links */
+/* Link Styles */
 a {
-  color: #F25C5C;
+  color: #FF5E5E;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: #B73A3A; /* Darker red when hovered */
-}
-
-/* Code and Preformatted Text */
-code {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #333; /* Dark background for code */
-  color: #F25C5C; /* Red text color for code */
-  padding: 5px;
-  border-radius: 3px;
-}
-
-pre {
-  background-color: #333; /* Dark background for preformatted text */
-  color: #F25C5C;
-  padding: 10px;
-  border-radius: 5px;
-  overflow-x: auto;
-  border: 1px solid #444; /* Subtle border */
-}
-
-/* Warning Box */
-.warning {
-  background-color: #3E0A0A; /* Darker red warning box */
-  padding: 10px;
-  border: 1px solid #7A1D1D; /* Slightly lighter red border */
-  margin-bottom: 20px;
-  border-radius: 5px;
-  color: #F2F2F2;
-}
-
-/* Details Section */
-details {
-  margin-top: 10px;
-}
-
-details summary {
-  cursor: pointer;
-  font-weight: bold;
-  color: #F25C5C; /* Red for clickable summary */
-}
-
-details summary:hover {
-  color: #B73A3A; /* Darker red on hover */
-}
-
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1C1C1C;
-  color: #F2F2F2;
-  margin-top: 40px;
-}
-
-footer a {
-  color: #F25C5C; /* Red links in footer */
-}
-
-footer a:hover {
-  text-decoration: underline;
+  color: #FF8C8C;
+  text-shadow: 0 0 5px rgba(255, 142, 142, 0.8);
 }
 
 /* Button Styles */
 button {
-  background-color: #F25C5C; /* Red button background */
-  color: white;
-  padding: 10px 20px;
+  background-color: #FF5E5E;
+  color: #FFFFFF;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #B73A3A; /* Darker red on hover */
+  background-color: #FF8C8C;
 }
 
-/* Container for Diagrams */
-.project-diagram img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+/* Pre Code Block */
+pre {
+  background-color: #1A1A1A;
+  color: #CCCCCC;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-      padding: 10px;
-  }
+/* Animation */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
 
-  h1 {
-      font-size: 1.5rem;
-  }
+a:hover {
+  animation: pop 0.3s forwards;
+}
 
-  h2 {
-      font-size: 1.4rem;
-  }
+/* Additional Styling */
+.warning {
+  background-color: #2C2C2C;
+  padding: 10px;
+  border-left: 5px solid #FF5E5E;
+  margin-bottom: 20px;
+}
 
-  table, pre, code {
-      font-size: 0.9rem;
-  }
+.warning p {
+  margin: 0;
+  color: #FF8C8C;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+details summary {
+  cursor: pointer;
+  color: #FF5E5E;
+}
+
+details[open] summary {
+  color: #FF8C8C;
 }

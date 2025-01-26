@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpeakX DevOps Project</title>
+    <title>🚀 SpeakX DevOps Project</title>
     <link rel="stylesheet" href="static/css/styles.css">
 </head>
+
 <body>
     <header>
         <h1>🚀 SpeakX DevOps Project</h1>
@@ -15,37 +17,75 @@
         <section class="project-domains">
             <h2>🌐 Project Domains & Endpoints</h2>
             <div class="warning">
-                <p><strong>Disclaimer !!!</strong> The website is SECURE but self-signed, you will see a warning if you're viewing this on a browser. If you're using cURL add <code>-k</code> flag to skip SSL warning.</p>
-            </div>
-            <div class="domain">
-                <h3>Primary Domain</h3>
-                <p><strong>Domain:</strong> <a href="https://flightman.lol">flightman.lol</a></p>
+                <p><strong>⚠️ Disclaimer !!!</strong> The website is SECURE but self-signed. If you're using a browser, you'll see a warning. With cURL, add <code>-k</code> flag to skip SSL warning.</p>
             </div>
 
-            <h3>API Endpoints</h3>
+            <div class="domain">
+                <h3>🔗 Primary Domain</h3>
+                <p><strong>Domain:</strong> <a href="https://flightman.lol" target="_blank">flightman.lol</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/flightman69/speakx-devops" target="_blank">speakx-devops</a></p>
+            </div>
+
+            <h3>🌐 API Endpoints</h3>
             <table>
                 <thead>
                     <tr>
                         <th>Endpoint</th>
                         <th>Description</th>
+                        <th>Method</th>
                         <th>Response</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>/</td>
+                        <td><a href="https://flightman.lol/" target="_blank">/</a></td>
                         <td>Home Endpoint</td>
+                        <td>GET</td>
                         <td>Welcome message</td>
+                    
                     </tr>
                     <tr>
-                        <td>/status</td>
+                        <td><a href="https://flightman.lol/status" target="_blank">/status</a></td>
                         <td>Application Status</td>
+                        <td>GET</td>
                         <td>JSON status</td>
+                        
                     </tr>
                     <tr>
-                        <td>/pic</td>
+                        <td><a href="https://flightman.lol/pic" target="_blank">/pic</a></td>
                         <td>Image Retrieval</td>
+                        <td>GET</td>
                         <td>Static image</td>
+                       
+                    </tr>
+                    <tr>
+                        <td><a href="https://flightman.lol/health" target="_blank">/health</a></td>
+                        <td>Health Check</td>
+                        <td>GET</td>
+                        <td>Health status</td>
+                       
+                    </tr>
+                    <tr>
+                        <td><a href="https://flightman.lol/joke" target="_blank">/joke</a></td>
+                        <td>Joke Endpoint</td>
+                        <td>GET</td>
+                        <td>A random joke</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><a href="https://flightman.lol/echo" target="_blank">/echo</a></td>
+                        <td>Echo Endpoint</td>
+                        <td>POST</td>
+                        <td>Echoes the input JSON</td>
+                       
+                    </tr>
+                    <tr>
+                        <td><a href="https://flightman.lol/weather" target="_blank">/weather</a></td>
+                        <td>Weather Information</td>
+                        <td>GET</td>
+                        <td>Weather info from wttr.in</td>
+                        
                     </tr>
                 </tbody>
             </table>
@@ -58,12 +98,17 @@
 curl -kL https://flightman.lol/
 curl -kL https://flightman.lol/status
 curl -kL https://flightman.lol/pic
+curl -kL https://flightman.lol/health
+curl -kL https://flightman.lol/joke
+curl -kL -X POST https://flightman.lol/echo -d '{"key":"value"}'
+curl -kL https://flightman.lol/weather
             </code></pre>
         </section>
 
         <section class="journey">
             <h2>🛠 How I Did It: A Personal Journey</h2>
-            <p><strong>Initial Conceptualization:</strong> When I first approached this DevOps assignment, I initially went with railway.app as my PaaS...</p>
+            <p><strong>When I first approached this DevOps assignment, I initially went with railway.app as my PaaS, inorder to develop a MVP as soon as possible and learn the concepts of devops, Once I gained the knowledge of basic DevOps, then I moved to AWS, it was rough in the beginning stages of dev, since I never used AWS before, understanding the components of aws was the biggest hurdle. But in the end I have made this MVP, Only thing left to do is moving from self-signed to CA-signed.</p>
+
             <h3>Step-by-Step Development Process</h3>
             <ul>
                 <li><strong>Cloud Provider Selection</strong>: Chose AWS for its comprehensive services...</li>
@@ -72,13 +117,12 @@ curl -kL https://flightman.lol/pic
                     <pre><code>
 # Dockerfile creation
 docker build -t speakx-flask-api .
-
 # Local testing
 docker run -p 3000:3000 speakx-flask-api
                     </code></pre>
                 </li>
                 <li><strong>Infrastructure as Code</strong>: Used Terraform to define infrastructure...</li>
-                <li><strong>Deployment Strategy</strong>: Used Docker Compose for container orchestration...</li>
+                <li><strong>Deployment Strategy</strong>: Used Docker Compose for orchestration...</li>
             </ul>
         </section>
 
@@ -114,7 +158,7 @@ docker run -p 3000:3000 speakx-flask-api
 
         <section class="previous-iteration">
             <h2>🚢 Previous Iteration: Railway.app</h2>
-            <p><strong>Initial Project:</strong> Domain: <a href="https://shavok.up.railway.app">shavok.up.railway.app</a></p>
+            <p><strong>Initial Project:</strong> Domain: <a href="https://shavok.up.railway.app" target="_blank">shavok.up.railway.app</a></p>
             <p><strong>Approach:</strong> Simplified PaaS deployment</p>
         </section>
 
@@ -161,26 +205,16 @@ docker run -p 3000:3000 speakx-flask-api
         <section class="lessons-learned">
             <h2>🚀 Lessons Learned</h2>
             <ul>
-                <li>Importance of infrastructure as code</li>
-                <li>Benefits of cloud-native architectures</li>
-                <li>Value of comprehensive deployment strategies</li>
+                <li>🔧 Importance of comprehensive security in the cloud</li>
+                <li>🌍 Criticality of scalability in production environments</li>
+                <li>💡 Understanding the infrastructure cost-performance balance</li>
             </ul>
         </section>
 
-        <section class="acknowledgments">
-            <h2>🤝 Acknowledgments</h2>
-            <p>Special thanks to Railway.app for providing an initial platform for rapid development and deployment.</p>
-        </section>
-
-        <section class="contributing">
-            <h2>🤝 Contributing</h2>
-            <p>Contributions are welcome! Please open an issue or submit a pull request.</p>
-        </section>
-
-        <section class="license">
-            <h2>📜 License</h2>
-            <p>GPL.v3</p>
-        </section>
+        <footer>
+            <p>© 2025 SpeakX Project. All rights reserved. | Built with ❤️ by Flightman</p>
+        </footer>
     </section>
 </body>
+
 </html>
