@@ -9,7 +9,7 @@ def home():
 @app.route('/status')
 def status():
     return jsonify({
-        "status": "API is up and Running"
+        "status": "API is up and Running."
     })
 @app.route('/pic')
 def show_pic():
