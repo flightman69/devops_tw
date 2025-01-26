@@ -106,25 +106,71 @@ curl -kL https://flightman.lol/weather
         </section>
 
         <section class="journey">
-            <h2>🛠 How I Did It: A Personal Journey</h2>
-            <p><strong>When I first approached this DevOps assignment, I initially went with railway.app as my PaaS, inorder to develop a MVP as soon as possible and learn the concepts of devops, Once I gained the knowledge of basic DevOps, I moved to AWS, it was rough in the beginning stages of dev, since I never used AWS before. Understanding the components of aws was the biggest hurdle. But in the end I have made this MVP, Only thing left to do is moving from self-signed to CA-signed SSL-Cert.</p>
-
-            <h3>Step-by-Step Development Process</h3>
-            <ul>
-                <li><strong>Cloud Provider Selection</strong>: Chose AWS for its comprehensive services and wide recognition...</li>
-                <li><strong>Local Development</strong>: Developed a simple Flask application...</li>
-                <li><strong>Containerization</strong>: 
-                    <pre><code>
-# Dockerfile creation
-docker build -t speakx-flask-api .
-# Local testing
-docker run -p 3000:3000 speakx-flask-api
-                    </code></pre>
-                </li>
-                <li><strong>Infrastructure as Code</strong>: Used Terraform to define infrastructure...</li>
-                <li><strong>Deployment Strategy</strong>: Used Docker Compose for orchestration...</li>
-            </ul>
-        </section>
+          <h2>🛠 How I Did It: A Personal Journey</h2>
+          <p>
+              <strong>When I first approached this DevOps assignment, I initially went with railway.app as my PaaS in order to develop an MVP as soon as possible and learn the concepts of DevOps. Once I gained the knowledge of basic DevOps, I moved to AWS. It was rough in the beginning stages of development since I had never used AWS before. Understanding the components of AWS was the biggest hurdle. But in the end, I created this MVP. The only thing left to do is moving from self-signed to CA-signed SSL certificate.</strong>
+          </p>
+      
+          <h3>Step-by-Step Development Process</h3>
+          <ol>
+              <li>
+                  <strong>Cloud Provider Selection</strong>
+                  <ul>
+                      <li>Chose AWS for its comprehensive services and wide recognition</li>
+                      <li>Created an AWS account</li>
+                      <li>Generated IAM user credentials</li>
+                  </ul>
+              </li>
+      
+              <li>
+                  <strong>Local Development</strong>
+                  <ul>
+                      <li>Developed a simple Flask application</li>
+                      <li>Created basic API endpoints</li>
+                      <li>Structured the application for containerization</li>
+                  </ul>
+              </li>
+      
+              <li>
+                  <strong>Containerization</strong>
+                  <pre><code>
+      # Dockerfile creation
+      docker build -t speakx-flask-api .
+      
+      # Local testing
+      docker run -p 3000:3000 speakx-flask-api
+                  </code></pre>
+              </li>
+      
+              <li>
+                  <strong>Infrastructure as Code</strong>
+                  <ul>
+                      <li>Used Terraform to define infrastructure</li>
+                      <li>Created security groups</li>
+                      <li>Provisioned an EC2 instance</li>
+                      <li>Set up an Elastic IP</li>
+                      <li>Created an ECR repository</li>
+                  </ul>
+              </li>
+      
+              <li>
+                  <strong>Deployment Strategy</strong>
+                  <ul>
+                      <li>Used Docker Compose for container orchestration</li>
+                      <li>Configured Nginx as a reverse proxy</li>
+                      <li>Implemented SSL termination</li>
+                  </ul>
+              </li>
+          </ol>
+      
+          <h4>Security Considerations</h4>
+          <ul>
+              <li>Implemented strict security group rules</li>
+              <li>Used environment variables for sensitive data</li>
+              <li>Ensured no hard-coded credentials</li>
+          </ul>
+      </section>
+      
 
         <section class="architecture">
             <h2>🔍 Technical Architecture</h2>

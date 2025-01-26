@@ -161,7 +161,7 @@ The move from Railway.app to AWS was driven by:
   - 💡 Containerization using Docker and Orchestration using docker-compose
 
 ## 🤝 Acknowledgments
-Special thanks to Railway.app for providing an initial platform for rapid development and deployment.
+Special thanks to Railway.app for providing an initial platform for rapid development and deployment.<br>
 Special thanks to [Aryan](https://github.com/theredditbandit) for reviewing this project and giving thoughtful insights.
 
 ## 🤝 Contributing
