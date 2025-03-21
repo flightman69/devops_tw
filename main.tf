@@ -50,16 +50,16 @@ resource "aws_eip" "api_ip" {
 resource "aws_instance" "api_server" {
   ami           = "ami-0c7217cdde317cfec"  # Ubuntu 22.04 LTS
   instance_type = "t2.micro"
-  key_name      = "speakx-aws-key"    
+  key_name      = "devops_tw-aws-key"    
   vpc_security_group_ids = [aws_security_group.api_sg.id]
   tags = {
-    Name = "speakx-aws-instance"
+    Name = "devops_tw-aws-instance"
   }
 }
 
 # 5. AWS Ecr Repo for Dockerimage
 resource "aws_ecr_repository" "flask_app" {
-  name = "speakx-ecr"
+  name = "devops_tw-ecr"
 }
 
 # 6. Ouput Ip addr (Elastic Ip)

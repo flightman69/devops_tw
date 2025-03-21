@@ -1,9 +1,14 @@
-# 🚀 SpeakX DevOps Project
+# 🚀 DevOps Training Wheels
 
 ## 🌐 Project Domains & Endpoints
 ### Disclaimer !!!
-- #### **The webiste uses secure connection **_(SSL)_** but self-signed, you will see a warning if you're viewing this on a browser, click advanced options and proceed to flightman.lol, <br> if you're using cURL add `-k` flag to skip ssl warning.** ####
+- #### **The aws site has been taken down** ####
+- ##### **Reason**: 
+   - free tier has been expired
+   - no money to keep hosting on aws
+
 ## Primary Domain
+ - ## **Domain on railway**: [shavok.up](shavok.up.railway.app)
  - ## **Domain**: [flightman.lol](https://flightman.lol)
 
 ### API Endpoints
@@ -115,7 +120,7 @@ When I first approached this DevOps assignment, I initially went with railway.ap
 ## 🛤️ Railway.app Deployment Journey
 
 ### Project Genesis
-My initial approach to the SpeakX project began with Railway.app, a Platform as a Service (PaaS) that simplifies deployment and scaling.
+My initial approach to the DevOps training wheels project began with Railway.app, a Platform as a Service (PaaS) that simplifies deployment and scaling.
 
 ### Technical Specifications
 - **Platform**: Railway.app
