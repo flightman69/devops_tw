@@ -11,7 +11,7 @@
 ## Primary Domain
 
  - ## **Railway.app Domain**: [shavok.up](shavok.up.railway.app)
- - ## **AWS Domain**: [flightman.lol](https://flightman.lol)
+ - ## **AWS Domain**: [devops-tw.up.railway.app](https://flightman.lol)
 
 ### API Endpoints
 | Endpoint | Description | Response |
@@ -28,13 +28,13 @@
 
 ```bash
 # API Endpoint Tests
-curl -kL https://flightman.lol/
-curl -kL https://flightman.lol/status
-curl -kL https://flightman.lol/pic
-curl -kL https://flightman.lol/health
-curl -kL https://flightman.lol/joke
-curl -kL -X POST https://flightman.lol/echo -d '{"key":"value"}'
-curl -kL https://flightman.lol/weather
+curl -kL https://devops-tw.up.railway.app/
+curl -kL https://devops-tw.up.railway.app/status
+curl -kL https://devops-tw.up.railway.app/pic
+curl -kL https://devops-tw.up.railway.app/health
+curl -kL https://devops-tw.up.railway.app/joke
+curl -kL -X POST https://devops-tw.up.railway.app/echo -d '{"key":"value"}'
+curl -kL https://devops-tw.up.railway.app/weather
 ```
 
 ## 🛠 How I Did It: A Personal Journey
@@ -114,7 +114,7 @@ When I first approached this DevOps assignment, I initially went with railway.ap
 ## 🚢 Previous Iteration: Railway.app
 
 ### Initial Project
-- **Domain**: Given in [flightman.lol](https://flightman.lol)
+- **Domain**: Given in [devops-tw.up.railway.app](https://devops-tw.up.railway.app)
 - **Approach**: Simplified PaaS deployment
 - **Limitations**: Less control, basic scalability
 
