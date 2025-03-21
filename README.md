@@ -6,10 +6,12 @@
 - ##### **Reason**: 
    - free tier has been expired
    - no money to keep hosting on aws
+   - ![Crying_Cat](https://github.com/user-attachments/assets/d3a08c2f-fd00-474c-a7f9-291570ec6a4d)
 
 ## Primary Domain
- - ## **Domain on railway**: [shavok.up](shavok.up.railway.app)
- - ## **Domain**: [flightman.lol](https://flightman.lol)
+
+ - ## **Railway.app Domain**: [shavok.up](shavok.up.railway.app)
+ - ## **AWS Domain**: [flightman.lol](https://flightman.lol)
 
 ### API Endpoints
 | Endpoint | Description | Response |
